@@ -1,0 +1,4 @@
+
+.icon-facebook:before { content: '\61'; } /* 'a' */
+.icon-instagram:before { content: '\62'; } /* 'b' */
+.icon-pinterest:before { content: '\63'; } /* 'c' */

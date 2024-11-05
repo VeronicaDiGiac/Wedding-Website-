@@ -1,0 +1,400 @@
+@font-face {
+  font-family: libertinusSans;
+  src: url(font/LibertinusSerif-Regular.otf);
+}
+@font-face {
+  font-family: "social";
+  src: url("fontello/font/social.eot?16682815");
+  src: url("fontello/font/social.eot?16682815#iefix")
+      format("embedded-opentype"),
+    url("fontello/font/social.woff2?16682815") format("woff2") fontello
+      url("fontello/font/social.woff?16682815") format("woff"),
+    url("fontello/font/social.ttf?16682815") format("truetype"),
+    url("fontello/font/social.svg?16682815#social") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* APPROCCIO DECKSTOP FIRST */
+
+/* reset generale */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: libertinusSans;
+  font-size: 1.5em;
+  background-color: #ffffff;
+}
+
+/* allineamento barra di menù ( il display flex funziona solo su ul) */
+
+/* provvisorio */
+
+/* header {
+  background-color: bisque;
+} */
+
+/* HOMEPAGE SECTION */
+
+.menu,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #282828;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.logo > a {
+  color: #000000;
+  font-size: 60px;
+}
+a:hover {
+  color: #696969;
+}
+.menu_sottolista {
+  list-style: none;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.info_sottolista:hover .menu_sottolista {
+  display: block;
+}
+.menu_sottolista > li > a {
+  font-size: 20px;
+  background-color: #d3d3d3;
+  margin: -5px;
+}
+
+figure > .container_img {
+  background-image: url(img/BrandiToolePhoto-163-1-768x512.jpg);
+  max-width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+}
+
+/* Media Query per Tablet Homepage*/
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .logo > a {
+    font-size: 50px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .homepage_img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .container_homepage > div > a {
+    font-size: 22px;
+  }
+  figure > .container_img {
+    height: 60vh;
+  }
+}
+
+/* Media Query per Smartphone Homepage */
+@media (max-width: 480px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-bottom: 8px;
+  }
+
+  .logo > a {
+    font-size: 40px;
+  }
+
+  a {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .info_sottolista {
+    position: relative;
+  }
+
+  .menu_sottolista {
+    position: static;
+  }
+
+  .homepage_img {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .container_homepage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_homepage > div > a {
+    font-size: 18px;
+  }
+  figure > .container_img {
+    height: 50vh; /* Ancora più piccolo su dispositivi molto ristretti */
+  }
+}
+
+/* MAIN SACTION */
+
+.main_saction {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  padding: 50px;
+  gap: 10%;
+}
+
+.main_saction > img {
+  width: 400px;
+  height: 600px;
+  margin-top: -250px;
+  z-index: 1;
+}
+
+.main_saction > .card_descrizione {
+  width: 700px;
+  position: relative;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+.main_saction > .card_descrizione > h2 {
+  font-size: 25px;
+  color: #696969;
+  margin-bottom: 20px;
+}
+
+.main_saction > .card_descrizione > h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #282828;
+}
+.main_saction > .card_descrizione > p {
+  font-size: 15px;
+  color: #696969;
+}
+
+.icone_social {
+  position: absolute;
+  top: 250px;
+  right: 0;
+}
+
+.icone_social > li {
+  font-family: social;
+  list-style-type: none;
+  float: left;
+}
+.icone_social > li > a {
+  font-size: 15px;
+}
+
+/* Media Queries per il layout responsivo */
+@media (max-width: 768px) {
+  .main_saction {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main_saction > img {
+    width: 150%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .main_saction > .card_descrizione {
+    width: 90%;
+    height: auto;
+  }
+
+  .main_saction > .card_descrizione > h2 {
+    font-size: 30px;
+  }
+
+  .main_saction > .card_descrizione > h5 {
+    font-size: 20px;
+  }
+
+  .main_saction > .card_descrizione > p {
+    font-size: 15px;
+  }
+
+  .icone_social {
+    position: relative;
+    top: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icone_social > li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_saction > h2 {
+    font-size: 20px;
+  }
+
+  .main_saction > h5 {
+    font-size: 12px;
+  }
+
+  .main_saction > p {
+    font-size: 12px;
+  }
+}
+
+/* CARD IMMAGINI */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.wrapper > div {
+  /* border: 2px solid black; */
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.wrapper > .img_1 {
+  background-image: url(img/carosello_1.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_2 {
+  background-image: url(img/carosello_2.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_3 {
+  background-image: url(img/carosello_3.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_4 {
+  background-image: url(img/carosello_4.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_5 {
+  background-image: url(img/carosello_9.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_6 {
+  background-image: url(img/carosello_5.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_7 {
+  background-image: url(img/carosello_7.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+.wrapper > .img_8 {
+  background-image: url(img/carosello_8.png);
+  background-repeat: no-repeat;
+  background-size: 95% 100%;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 10%;
+  text-align: center;
+  position: relative;
+  height: 500px;
+}
+
+footer > h3 {
+  color: #696969;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  padding: 5px;
+  text-shadow: 2px 2px 2px #d3d3d3;
+}
+
+.divisore {
+  border-top: 2px solid #696969;
+  width: 100%;
+  margin-bottom: 60px;
+  margin-top: 5px;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+footer > .flex_container > .lista_uno > a {
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #d3d3d3;
+  color: #696969;
+}
+
+footer > .flex_container > .lista_due > a {
+  font-size: 25px;
+  text-shadow: 2px 2px 2px #d3d3d3;
+  color: #696969;
+}
+
+footer > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  margin-top: 20px;
+  color: #282828;
+}

@@ -1,0 +1,420 @@
+@font-face {
+  font-family: libertinusSans;
+  src: url(font/LibertinusSerif-Regular.otf);
+}
+
+/* @font-face {
+  font-family: semibold;
+  src: url(font/LibertinusSerif-Semibold.otf);
+}
+
+@font-face {
+  font-family: sbold;
+  src: url(font/LibertinusSerif-Bold.otf);
+} */
+
+@font-face {
+  font-family: "social";
+  src: url("fontello/font/social.eot?16682815");
+  src: url("fontello/font/social.eot?16682815#iefix")
+      format("embedded-opentype"),
+    url("fontello/font/social.woff2?16682815") format("woff2") fontello
+      url("fontello/font/social.woff?16682815") format("woff"),
+    url("fontello/font/social.ttf?16682815") format("truetype"),
+    url("fontello/font/social.svg?16682815#social") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* reset generale */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: libertinusSans !important;
+  font-size: 1.5em !important;
+  background-color: #ffffff;
+}
+
+/* HOMEPAGE SECTION */
+
+.menu,
+a {
+  text-decoration: none !important;
+  list-style-type: none;
+  color: #282828 !important;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.logo > a {
+  color: #000000;
+  font-size: 60px;
+}
+a:hover {
+  color: #696969;
+}
+.menu_sottolista {
+  list-style: none;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.info_sottolista:hover .menu_sottolista {
+  display: block;
+}
+.menu_sottolista > li > a {
+  font-size: 20px;
+  background-color: #d3d3d3;
+  margin: -5px;
+}
+/* Media Query per Tablet Homepage*/
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .logo > a {
+    font-size: 50px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .homepage_img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .container_homepage > div > a {
+    font-size: 22px;
+  }
+}
+
+/* Media Query per Smartphone Homepage */
+@media (max-width: 480px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-bottom: 8px;
+  }
+
+  .logo > a {
+    font-size: 40px;
+  }
+
+  a {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .info_sottolista {
+    position: relative;
+  }
+
+  .menu_sottolista {
+    position: static;
+  }
+
+  .homepage_img {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .container_homepage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_homepage > div > a {
+    font-size: 18px;
+  }
+}
+/*  IMMAGINE HOMEPAGE SEZIONE PORTFOLIO  */
+
+.container_img {
+  background-image: url(img/Bradporfolio.jpg);
+  max-width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  position: relative;
+}
+
+figure > .container_img > span {
+  position: absolute;
+  bottom: 10%;
+  left: 28%;
+}
+
+figure > .container_img > span > h1 {
+  text-align: center;
+  font-size: 6em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #696969;
+}
+
+figure > .container_img > span > p {
+  text-align: center;
+  color: #424141;
+}
+
+/* Media Query per Tablet */
+@media (max-width: 768px) {
+  .container_img {
+    height: 60vh;
+  }
+
+  figure > .container_img > span {
+    left: 20%;
+  }
+
+  figure > .container_img > span > h1 {
+    font-size: 4em;
+  }
+
+  figure > .container_img > span > p {
+    font-size: 1.5em;
+  }
+}
+
+/* Media Query per Smartphone */
+@media (max-width: 480px) {
+  .container_img {
+    height: 50vh;
+  }
+
+  figure > .container_img > span {
+    left: 0%;
+  }
+
+  figure > .container_img > span > h1 {
+    font-size: 3em;
+    /margin-right: -10px;
+  }
+
+  figure > .container_img > span > p {
+    font-size: 1em;
+  }
+}
+/* SLIDER IMG  */
+
+#carouselContainer {
+  padding: 30px;
+}
+#carouselExample {
+  max-width: 900px;
+
+  margin: auto;
+  padding: 20px;
+}
+
+/* PHOTO GALLERIES SECTION */
+
+.photo_galleries_section {
+  background-color: #ffefe5;
+  margin-top: 20px;
+}
+
+.photo_galleries_section > .h1_container > span > h1 {
+  text-align: center;
+  font-size: 6em;
+  color: #d3d3d3;
+  text-shadow: 2px 2px 4px #696969;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.flex_container > .img_2 > a > img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.flex_container > .img_2 > a > img:hover {
+  transform: scale(1.1);
+}
+
+.container_nomi {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.container_nomi > span > h2 {
+  text-transform: uppercase;
+  margin: 10px;
+  color: #696969;
+  text-shadow: 2px 2px 2px #d3d3d3;
+  letter-spacing: 1.2px;
+  padding: 20px;
+}
+
+.flex_container_2 {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.container_nomi > span > p {
+  font-size: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-transform: uppercase;
+  color: #696969;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.flex_container_2 > .img_5 > a > img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.flex_container_2 > .img_5 > a > img:hover {
+  transform: scale(1.1);
+}
+
+/* Media Query per Tablet galleries */
+@media (max-width: 768px) {
+  .photo_galleries_section > .h1_container > span > h1 {
+    font-size: 4em;
+  }
+
+  .flex_container,
+  .flex_container_2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .container_nomi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_nomi > span > h2 {
+    font-size: 1.5em;
+  }
+
+  .container_nomi > span > p {
+    font-size: 0.8em;
+  }
+}
+
+/* Media Query per Smartphone galleries */
+@media (max-width: 480px) {
+  .photo_galleries_section > .h1_container > span > h1 {
+    font-size: 3em;
+  }
+
+  .container_nomi > span > h2 {
+    font-size: 1.2em;
+  }
+
+  .container_nomi > span > p {
+    font-size: 0.7em;
+  }
+}
+
+/* FOOTER */
+.footer_container {
+  margin-top: 10%;
+  background-color: #edeaea;
+  max-width: 100%;
+}
+
+.footer_container > span > h1,
+h3 {
+  text-align: center;
+  color: #424141;
+  padding: 5px;
+  margin: 5px;
+  text-shadow: 2px 2px 2px #d3d3d3;
+}
+
+.footer_container > span > h1 {
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+.footer_container > span > h3 {
+  font-size: 20px;
+}
+
+.icone_social {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.icone_social > li {
+  font-family: social;
+  list-style-type: none;
+  float: left;
+}
+
+.icone_social > li > a {
+  font-size: 1.2em;
+}
+
+.lets_chat_btn {
+  display: flex;
+  justify-content: center;
+  margin-right: -30px;
+  padding: 20px;
+}
+.lets_chat_btn > p {
+  background-color: #acacac;
+  max-width: 240px;
+  min-height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.footer_container > .lets_chat_btn > p > a {
+  padding: 5px;
+}
+.footer_container > .lets_chat_btn > p > a:hover {
+  color: #d3d3d3;
+}
+
+.img_footer > p {
+  font-size: 15px;
+  color: #282828;
+  text-transform: uppercase;
+}
+/* Media Query per Smartphone footer */
+@media (max-width: 480px) {
+  .img_footer > p {
+    font-size: 10px;
+  }
+}
